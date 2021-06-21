@@ -1,0 +1,8 @@
+@mixin header-theme($theme) {
+  app-header {
+    header {
+      background: function.theme-colour($theme, background);
+      box-shadow: 0 0 5px function.theme-colour($theme, font, box-shadow);
+    }
+  }
+}

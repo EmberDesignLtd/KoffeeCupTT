@@ -1,0 +1,30 @@
+@use '../../scss/base';
+
+header {
+  left: 0;
+  padding: map-get(base.$spacing, m);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  margin: 0 auto;
+  max-width: base.$max-width;
+  padding: 0 20px;
+}
+
+.theme-toggle-icon {
+  color: inherit;
+  fill: inherit;
+  height: 24px;
+
+  width: 24px;
+}
+
+.theme-toggle {
+  margin-left: auto;
+}
