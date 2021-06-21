@@ -1,12 +1,10 @@
 @use '../../scss/base';
 
-$gallery-width: 1200px;
-
 .gallery {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: $gallery-width;
+  max-width: base.$max-width;
   padding: 20px 0;
 }
 
