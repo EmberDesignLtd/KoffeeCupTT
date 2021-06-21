@@ -1,4 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { JsonPlaceholderService } from './../../services/json-placeholder.service';
 
 @Component({
   selector: 'app-gallery',
@@ -6,4 +7,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./gallery.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class GalleryComponent {}
+export class GalleryComponent {
+  readonly images$ = this.jsonPlaceholderService.getImages();
+
+  constructor(
+    private readonly jsonPlaceholderService: JsonPlaceholderService
+  ) {}
+}

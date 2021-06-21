@@ -1,0 +1,26 @@
+@use '../../scss/base';
+
+$gallery-width: 1200px;
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: $gallery-width;
+  padding: 20px 0;
+}
+
+.image-container {
+  margin: 20px;
+  position: relative;
+  transition: width 0.4s base.$ease-out-cubic, margin 0.4s base.$ease-out-cubic;
+  width: 100%;
+
+  @include base.breakpoint(600px) {
+    width: calc(50% - 40px);
+  }
+
+  @include base.breakpoint(1000px) {
+    width: calc(33.33% - 40px);
+  }
+}
