@@ -1,7 +1,7 @@
 <div *ngIf="images$ | async as images" class="gallery">
   <div *ngFor="let image of images" class="image-container">
     <!-- To customise the offset value simply add the following input [appLazyLoadImagesOffset]="'50px'" -->
-    <div appLazyLoadImages>
+    <div appLazyLoadImages class="image-ratio">
       <app-image [imageSource]="image.url"></app-image>
     </div>
   </div>
